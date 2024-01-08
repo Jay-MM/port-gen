@@ -28,13 +28,20 @@ inquirer.prompt([
   { 
     type: "input",
     name:"linkedin",
-    message:"What is your LinkedIn url?",
+    message:"What is your LinkedIn profile sub-domain?",
   },
   { 
     type: "input",
     name:"github",
-    message:"What is your github url?",
+    message:"What is your github user name?",
   },
+  
+  { 
+    type: "input",
+    name:"img",
+    message:"What is the name of the img file you would like to  use? \n(Make sure that the file is inside an 'assets' directory in the root of your project. \nInclude the type of file(e.g: png, jpeg..etc..)",
+  },
+  
 
 ])
 .then( answers => {
@@ -53,3 +60,4 @@ inquirer.prompt([
   
 })
 .catch( err => console.log(err))
+

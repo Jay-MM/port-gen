@@ -3,6 +3,7 @@ const generatehtml = data => {
   console.log(data);
 
   const { name, 
+    img,
     location, 
     bio, 
     email, 
@@ -23,29 +24,29 @@ const generatehtml = data => {
 
 <body class = "container">
   <header>
-    <div class = "container d-flex justify-content-between align-items-start pb-5 pt-4">
+    <div class = "container d-flex justify-content-between align-items-start pb-5 pt-4 shadow-lg">
     <figure>
-      <img src="./assets/dev.pfp.png" class= "img-fluid"  alt="profile picture">
+      <img src="./assets/${img}" class= "img-fluid"  alt="profile picture">
       <figcaption>${location}</figcaption>
     </figure>
       <h1 class="lh-lg">${name}</h1>
     </div>
   </header>
   <main>
-    <div class="container-fluid my-5 py-5 my-5 border border-black border border-3 bg-light shadow-lg">
+    <div class="container-fluid my-5 pt-5 pb-3 my-5 border border-black border border-3 shadow-lg">
       <h2>Who am i?</h2>
       <p>${bio}</p>
     </div>
   </main>
   <footer>
-    <div class = "container d-flex justify-content-between py-5 position-absolute bottom-0 fs-3">
+    <div class = "container d-flex justify-content-between py-4 fs-3">
       <a href="mailto:${email}?subject=Salutations!&body=Hi, I just wanted to tell you that you are awesome!">
         <i class="bi bi-envelope-at-fill"></i>
       </a>
-      <a href="${github}">
+      <a href="https://github.com/${github}" target="_blank">
         <i class="bi bi-github"></i>
       </a>
-      <a href="${linkedin}">
+      <a href="https://www.linkedin.com/in/${linkedin}" target="_blank">
         <i class="bi bi-linkedin"></i>
       </a>
       </div>     
